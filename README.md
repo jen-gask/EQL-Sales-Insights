@@ -1,1 +1,5 @@
-# EQL-Sales-Insights
+# EQL Sales Insights
+## Overview
+## Insights Summary
+## Screenshots
+## Recommendations
