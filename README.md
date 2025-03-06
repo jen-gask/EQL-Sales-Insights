@@ -1,10 +1,6 @@
 # EQL Sales Trend Analysis
 ## Background
-EQL is an e-commerce electronics company specializing in the consumer electronics space. As a way to reflect on years that changed the baseline of the business, the company wanted to understand what happened with popular item sales in the years of 2019 to 2022 with a thorough analysis and surface any insights to direct where to spend additional resources in the future.
- 
-## Overview
-![EQL _erd.png](https://github.com/jen-gask/EQL-Sales-Insights/blob/d5d7016eb413494701e839ecae7b9b9def5ffe74/EQL%20_erd.png)
-
+EQL is an e-commerce electronics company specializing in the consumer electronics space. As a way to reflect on years that changed the baseline of the business, the company wanted to understand what occurred in their sales activity in the years of 2019 to 2022 with a thorough analysis to surface insights and direct where to spend additional resources in the future.
 
 ## Insights Summary
 **Executive Summary**
@@ -243,3 +239,9 @@ Interestingly, non-members have a higher average spend, suggesting that loyalty 
     
     Laptops rank high in both revenue and refunds. Refunds may likely be due to complexity and varying customer needs.
     -   **Recommendation**: Enrich listings with detailed specs, compatibility guides, user video reviews, and “compare” features. This allows customers to self-select laptops that fit their actual usage needs, potentially bringing refunds closer to the 5% overall average.
+ 
+## Appendix
+### ERD
+![EQL _erd.png](https://github.com/jen-gask/EQL-Sales-Insights/blob/d5d7016eb413494701e839ecae7b9b9def5ffe74/EQL%20_erd.png)
+
+
