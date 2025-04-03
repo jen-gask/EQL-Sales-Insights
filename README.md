@@ -30,9 +30,9 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
 -   **Lowest Regional Contributor**  
     **APAC** posted the smallest overall sales totals, suggesting potential for market expansion or targeted growth strategies in that region.
 
-![](https://github.com/jen-gask/EQL-Sales-Insights/blob/cd08e5fdfe7212e7e9cf646c77f6bdccad1c7b12/Image%20Assets/rev%20growth%20is%20tied%20to%20increased%20order%20numbers.PNG)
-### Overall Sales & Order Trends
 
+### Overall Sales & Order Trends
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/cd08e5fdfe7212e7e9cf646c77f6bdccad1c7b12/Image%20Assets/rev%20growth%20is%20tied%20to%20increased%20order%20numbers.PNG)
 -   **Parallel Trajectories**  
     Throughout the analysis, total sales and order volumes closely mirrored each other. This strong correlation indicates that the primary driver of revenue growth was the increasing number of orders rather than a shift in average order size.
     
@@ -40,9 +40,11 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
     **October 2020** stands out with an average order value of **$320**, initiating a five-month period of elevated average order values above **$300**. This pattern points to a sustained willingness among customers to purchase higher-priced or more premium products for nearly half a year spanning the popular holiday purchasing season.
 
 
-![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/sales_aov_number%20of%20orders%20by%20product.PNG) ![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/total%20product%20sales.PNG)
+
 ### Product Performance
 
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/sales_aov_number%20of%20orders%20by%20product.PNG){: style="height:83px"}
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/total%20product%20sales.PNG){: style="height:83px"}
 -  **Top-Selling Products**
     
     -  **27in 4K Gaming Monitor**: $9.85M in total sales
