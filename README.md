@@ -1,23 +1,25 @@
 # EQL Sales Trend Analysis
 ## Background
-EQL is an e-commerce electronics company specializing in the consumer electronics space. As a way to reflect on years that changed the baseline of the business, the company wanted to understand what occurred in their sales activity in the years of 2019 to 2022 with a thorough analysis to surface insights and direct where to spend additional resources in the future.
+EQL is an e-commerce electronics company specializing in the consumer electronics space. As a way to reflect on years that changed the baseline of the business, the company aimed to understand what occurred in their sales activity in the years of 2019 to 2022 with a thorough analysis to surface insights and direct where to spend additional resources in the future.
 
 ## Insights Summary
 **Executive Summary**
 
-Between 2019 and 2022, EQL recorded **$28 million** in total sales across **108,000 orders**, achieving an **average order value of $260**. Sales growth was most pronounced in **2020**, which saw a **162% increase** over the prior year and culminated in a record **$1.2 million** in December alone. Meanwhile, 2019 represented a lower baseline, with monthly sales frequently under **$500,000**.
+Between 2019 and 2022, EQL recorded **$28 million** in total sales across **108,000 orders**, with an **average order value of $260**. Sales growth was most pronounced in **2020**, which saw a **162% increase** over the prior year and peaked in a record **$1.2 million** in December alone. Meanwhile, 2019 represented a lower baseline, with monthly sales frequently under **$500,000**.
 
-Across regions, **North America** dominated both sales and customer distribution, while **APAC** contributed the smallest share. The **27in 4K Gaming Monitor** emerged as the top-selling product globally, driving **$9.85 million** in revenue. Refunds averaged **5%** over the four-year span—peaking at **9%** in 2020—and loyalty program members, though initially lower in overall spend, eventually outperformed non-members in average order value and total sales from mid-2021 through late 2022. Together, these findings highlight EQL’s strong market momentum during 2020’s peak, the consistent impact of seasonality (especially holiday peaks in December), and clear opportunities for targeted growth strategies in underperforming regions and product lines.
+Across regions, **North America** dominated both sales and customer distribution, while **APAC** contributed the smallest share. The **27in 4K Gaming Monitor** emerged as the top-selling product globally, driving **$9.85 million** in revenue. Refunds averaged **5%** over the four-year span, peaking at **9%** in 2020. In additiona, loyalty program members initially lower in overall spend, eventually outperformed non-loyalty members in average order value and total sales from mid-2021 through late 2022. Together, these findings highlight EQL’s strong market momentum during 2020’s peak, the consistent impact of seasonality (especially holiday peaks in December), and clear opportunities for targeted growth strategies in underperforming regions and products.
+
+![EQL sales overview](https://github.com/jen-gask/EQL-Sales-Insights/blob/3866b67f2062dad2116da19f8802ba2dac23b53c/Image%20Assets/Overview%20AOV%20Sales.PNG)
 
  ### Key Comparisons & Growth Highlights
 -   **Highest-Performing Year**  
-In **2020**, sales surged by **162%** compared to 2019, marking the most significant annual growth throughout the dataset. This spike suggests a confluence of factors— especially increased market demand due to the pandemic.
+In **2020**, sales surged by **162%** compared to 2019, marking the most significant annual growth. This behavior points to a blend of factors especially increased market demand due to the pandemic.
     
 -   **Strongest Month**  
     The highest single-month performance occurred in **December 2020**, hitting **$1.2M** in sales. This underscores the importance of the holiday season and year-end promotions.
     
 -   **Largest Monthly Jump**  
-    Sales rose by **50%** between **February and March 2020**, signaling a particularly sharp upswing that may reflect effective early-year campaigns and shifting consumer needs going into the pandemic worldwide changes that saw people spend much more time at home.
+    Sales rose by **50%** between **February and March 2020**, signaling a sharp upswing that may reflect effective early-year campaigns and shifting consumer needs going into the pandemic worldwide changes that saw people spend much more time at home.
     
 -   **Lowest-Performing Year**  
     **2019** showed the weakest performance, with most months under **$500K** in sales. This baseline offers a clear contrast to the dramatic improvements in 2020.
@@ -40,15 +42,15 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
 
 -  **Top-Selling Products**
     
-    1.  **27in 4K Gaming Monitor** – $9.85M in total sales
-    2.  **Apple AirPods** – $7.74M
-    3.  **MacBook Air Laptop** – $6.30M  
+    -  **27in 4K Gaming Monitor**: $9.85M in total sales
+    -  **Apple AirPods**: $7.74M
+    -  **MacBook Air Laptop**: $6.30M  
     
 These three products clearly resonate with consumers, reflecting a mix of high-demand tech accessories and essential devices, some with brand recognition.
 
 -   **Lowest-Selling Product**
     
-    -   **Bose Headphones** recorded the least sales across all regions, hinting at a disconnect between the brand’s audio devices and this particular customer base.
+    -   **Bose Headphones** recorded the least sales across all regions, hinting at a disconnect between the brand and the current customer base.
 -   **Notable Regional Bestseller**: 27in 4K Gaming Monitor
     
     -   **North America**: $3.91M
@@ -59,66 +61,35 @@ These three products clearly resonate with consumers, reflecting a mix of high-d
 Across all geographies, the 27in 4K Gaming Monitor consistently tops the charts, indicating strong consumer need for high-resolution displays.
 
 ### Regional Insights
-Regions are displayed from strongest distribution to weakest.
-
 #### North America
 -   **Overall Market Leader**  
-    North America posts the highest total revenue, reinforcing its position as the primary sales driver for many of the products.
+    North America posts the highest total revenue, reinforcing its position as the primary sales driver for many of the product.
     
--   **Product-Level Sales Distribution**
-	  -   **Strongest Relative Distribution**: Samsung Webcam at 58% of regional sales distribution, possibly reflecting robust demand for remote work or streaming solutions.
-	   
-	  -    **Weakest Relative Distribution**: Apple iPhone sits at 47% of regional sales distribution, lower than anticipated given the brand’s strong global presence.
 #### EMEA
-
--   **Strongest Distribution**
-
-    -   **Bose Soundsport Headphones** perform comparatively well here, capturing the highest share among all regions.
-    
-    -   **Apple AirPods** also contribute substantial revenue at $2.3M, suggesting EMEA consumers’ strong interest in premium audio devices and potentially audio devices with brand recognition.
-     
--   **Weakest Distribution**
-
-    -   **Samsung Webcam** lags in EMEA market share, possibly indicating stronger competition from local or alternative webcam brands.
-
+-   The next strongest region in sales revenue is EMEA typically lagging North America's perfermance by at least half. With it's customer base just over half that of North America, revenue has some space to grow and would be worth investigating additional opportunities for maximizing sales in this region.
+  
 #### APAC
-
--   **Notable Product Spikes**
-    -   **Apple iPhone** sales jumped 125% in August 2021 after no sales the previous 4 months indicating a catalyst such as a phone release or campaign that prompted the sales jump.*
-    
-    -   **Samsung Webcam** sales jumped 91% in December 2021 coinciding with holiday campaigns.*
--   **Strongest  Distribution**
-    -   Compared to APAC sales distribution across other products, Apple iPhone stands out with higher-than-expected average sales indicating a strong demand and potential opportunity to see how deep the well of demand may be.
-   -   **Weakest  Distribution** 
-	    -   Compared to APAC sales distribution across other products Bose Soundsport Headphones make up only 8% of global sales here, the weakest performance for that product and for the APAC region.
-    
--   **Samsung Webcam Underperformance**
-    -   Despite the August 2021 surge, Samsung Webcam underperformed relative to other regions overall, suggesting a market acceptance challenge or strong local competition outside that spike period.
-    
- **Sales did normalize post-spike.*
+-   **Highest Total Average Order Value**
+     The APAC region held a surprisingly high average order value, coupled with a 9% spend on the two most expensive products - the Macbook Air and ThinkPad laptops - there may be a tolerance for higher ticket products in this region.
 
 #### LATAM
+-    LATAM has the lowest average order value by $27 from the next lowest average order value and is also the region with the lowest sales. This could point to the regions higher sensitivity to price than other regions or a mismatch in products.
 
--   **High Product Distribution**
-    -   **Samsung Webcams** are at a 10% sales distribution for LATAM, outpacing both the average distribution across all products for this region(6%) and slightly surpassing APAC’s distribution for Samsung Webcams.
-    
--   **Low-Performing Products**
-    -   **Bose Soundsport Headphones** show a mere 3% distribution by comparison to LATAM's average sales. There may be a more popular alternative in this region.
-    
-    -   **Apple AirPods** also struggle at a 5% share. While this distribution is much closer to the region's average of 6%, this products sits at the lower end of distribution for LATAM sales and should be further evaluated. 
+  *For deeper insights into regional product performance, see the appendix.
+
 
 ### Refund Patterns
 
 -   **2019-2022 Average**  
-    Overall, **5%** of items sold were refunded.*
+    Overall, **6%** of items sold were refunded.* However, that amounted to **12%** profit loss due to refunds.
     
 -   **Annual Trends**
     -   **2019**: 6% refund rate.
     -   **2020**: 9%, mirroring a large spike in sales.
     -   **2021**: 4%, indicating refunds dropped despite higher order volumes.
-    -   **2022**: 0%, reflecting a missing refund dataset wherein refund data was missing.
+    -   **2022**: *0%, reflecting a missing refund dataset wherein refund data was missing so this was omitted from the evaluation.*
 -   **Correlation with Sales** 
-	- Refund rates typically escalated in periods of booming sales and tapered off as volumes normalized.
+	- Refund rates typically escalated in periods of booming sales and tapered off as volumes normalized, however, the value of refunds continued to grow into 2021 hitting 18% profit loss. 
 -   **Product-Specific Refunds**
     -   **Apple products** hovered around a 10% refund rate.
     
@@ -133,7 +104,7 @@ Regions are displayed from strongest distribution to weakest.
     -   Loyalty Members: **$240**
     -   Non-Members: **$275**
     
-Interestingly, non-members have a higher average spend, suggesting that loyalty members might be utilizing discounts or promotions more frequently.
+Interestingly, non-members have a higher average spend, suggesting that loyalty members might be using discounts or promotions frequently.
         
 -   **Total Sales & Order Counts**
     -   Loyalty Participants: **$10M** total; 45K orders.
@@ -164,41 +135,38 @@ Interestingly, non-members have a higher average spend, suggesting that loyalty 
 
     -   From **2019 to 2020**, all regions exceeded **100%** in new customer growth, reflecting the sharp uptick in 2020 sales.
     
-    -   **2020 to 2021** saw a slowdown in most regions, except for LATAM’s modest 3% increase.
+    -   **2020 to 2021** saw a slowdown in growth most regions compared to 2019 to 2020, except for LATAM and NA who saw a big more moderate bumps in customer growth albeit still conservative.
     
-    -   **2021 to 2022** marked a notable decline across all regions, suggesting market saturation or shifting economic conditions.
-    
--   **Sales vs. Customer Growth Discrepancies**
-    -   **2021** stands out, particularly in **LATAM**, where more new customers did not translate into higher revenues. In fact, sales dropped by 33% in spite of slight customer gains, suggesting an issue with conversion, pricing, or product mix.
+    -   **2021 to 2022** marked a notable decline across all regions, likely due to post-pandemic shifting consumer behaviors like workers heading back to the office.
     
 ## Recommendations
 ###  Product Strategy
 
 -   **Expand Monitor Portfolio**
     
-    The 27in 4K Gaming Monitor generated **$9.85M**—roughly **35%** of sales among the top three products—establishing it as the single highest-grossing item.
-    -   **Recommendation**: Merchandising should introduce additional monitor models (varying in specs and price points) to capitalize on the consistent demand for displays. This could boost overall revenue, particularly in high-growth periods like 2020, which saw a **162%** jump in total sales over 2019.
+    The 27in 4K Gaming Monitor generated **$9.85M** which is about **35%** of sales among the top three products. This establishes it as the single highest-grossing item.
+    -   **Recommendation**: Add additional monitor models (varying in specs and price points) to capitalize on the consistent demand for displays. This could boost overall revenue, particularly in high-growth periods like 2020, which saw a **162%** jump in total sales over 2019.
 -   **Leverage Apple’s Brand Potential**
     
-    The **second- and third-best-selling** items—Apple AirPods ($7.74M) and MacBook Air ($6.30M)—together represent nearly **50%** of the top-three-product revenue. However, the Apple iPhone did not perform as strongly in certain regions.
-    -   **Recommendation**: Focus on in-demand Apple lines to avoid mediocre performers. Analyze item-specific sales trends to pinpoint which new Apple releases or accessories align best with consumer preferences (e.g., AirPods Max, iPads), ensuring the right product mix for each market segment.
+    The **second- and third-best-selling** items—Apple AirPods ($7.74M) and MacBook Air ($6.30M) which, together, represent nearly **50%** of the top-three-product revenue. However, the Apple iPhone did not perform as strongly in certain regions.
+    -   **Recommendation**: Focus on in-demand Apple lines to avoid poor performers. Analyze item-specific sales trends to identify which new Apple releases or accessories align best with customer preferences (like AirPods Max, iPads), ensuring the right product mix for each market segment.
 -   **Broaden Laptop Offerings**
     
-    Laptops (MacBook Air and ThinkPad) collectively occupy two of the top four revenue spots. The average order value (AOV) across all products is **$260**, but laptops often fall into a higher price bracket, making them a key revenue driver.
-    -   **Recommendation**: Introduce a wider range of laptops (gaming, ultrabooks, budget-friendly) to serve diverse customers and reduce refunds linked to mismatched specs. More robust product listings—including spec sheets, video demos, and Q&A—can also preempt unnecessary returns.
+    Laptops (MacBook Air and ThinkPad) occupy two of the top four revenue spots. The average order value across all products is **$260**, but laptops often fall into a higher price bracket, making them a key revenue driver.
+    -   **Recommendation**: Introduce a wider range of laptops (gaming, luxury, budget-friendly) to serve diverse customers and reduce refunds linked to mismatched specs. More robust product listings that include detailed spec sheets, video demos, and Q&A can also help reduce unnecessary returns.
 -   **Assess Bose Headphones’ Feasibility**
     
-    Bose Headphones perform at the lowest revenue level across all regions. In EMEA, however, audio sales in general (e.g., AirPods, Bose) fared better relative to that region’s baseline.
-    -   **Recommendation**: Before discontinuation, test region-specific promotions or offers like bundling (for example, pairing Bose Headphones with other popular products) to gauge if targeted strategies can rev up sales. If low performance persists—even in EMEA—reevaluate the cost of carrying this product.
+    Bose Headphones perform the worst across all regions. In EMEA, however, audio sales in general (e.g., AirPods, Bose) fared better relative to that region’s baseline.
+    -   **Recommendation**: Before discontinuation, test region-specific promotions or offers like bundling (for example, pairing Bose Headphones with other popular products) to gauge if targeted strategies can amp up sales. If low performance persists, then reevaluation of the cost of carrying this product is needed.
     
    ### Regional Approach
 
 -   **Cultivate LATAM and APAC**
     
-    LATAM exhibited promising growth—especially with Samsung Webcams at a **10%** distribution share (above the 6% distribution average for that region). Meanwhile, APAC contributed fewer total sales but showed notable spikes, such as the Apple iPhone surge in August 2021.
-    -   **Recommendation**: Direct more marketing and product resources to LATAM, leveraging the region’s emerging consumer base. In APAC, dig deeper into seasonal or campaign drivers (especially around August and December) that fueled notable product-specific gains.
+    LATAM exhibited promising growth, especially with Samsung Webcams at a **10%** distribution share (above the 6% distribution average for that region). Meanwhile, APAC contributed fewer total sales but showed notable spikes, such as the Apple iPhone surge in August 2021.
+    -   **Recommendation**: Direct more marketing and product resources to LATAM, leveraging the region’s emerging consumer base. In APAC, dig deeper into seasonal or campaign drivers (especially around August and December) that fueled product gains.
     
--   **Bolster EMEA’s Audio Market and Lagging Webcams**
+-   **Amp up EMEA’s Audio Market and Lagging Webcams**
     
     EMEA generated **$2.3M** in Apple AirPods revenue and sold Bose Headphones comparatively better than other regions, revealing a preference for premium audio.
     -   **Recommendation**: Capitalize on this affinity by spotlighting headphones, earbuds, and related accessories. On the other hand, Samsung Webcam sales lag here. Product should investigate whether built-in laptop webcams or strong local competitors limit demand.
