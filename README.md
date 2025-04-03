@@ -19,7 +19,7 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
     The highest single-month performance occurred in **December 2020**, hitting **$1.2M** in sales. This underscores the importance of the holiday season and year-end promotions.
     
 -   **Largest Monthly Jump**  
-    Sales rose by **50%** between **February and March 2020**, signaling a sharp upswing that may reflect effective early-year campaigns and shifting consumer needs going into the pandemic worldwide changes that saw people spend much more time at home.
+    Sales rose by **33%** between **February and March 2020**, signaling a sharp upswing that may reflect effective early-year campaigns and shifting consumer needs going into the pandemic worldwide changes that saw people spend much more time at home.
     
 -   **Lowest-Performing Year**  
     **2019** showed the weakest performance, with most months under **$500K** in sales. This baseline offers a clear contrast to the dramatic improvements in 2020.
@@ -30,6 +30,7 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
 -   **Lowest Regional Contributor**  
     **APAC** posted the smallest overall sales totals, suggesting potential for market expansion or targeted growth strategies in that region.
 
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/cd08e5fdfe7212e7e9cf646c77f6bdccad1c7b12/Image%20Assets/rev%20growth%20is%20tied%20to%20increased%20order%20numbers.PNG)
 ### Overall Sales & Order Trends
 
 -   **Parallel Trajectories**  
