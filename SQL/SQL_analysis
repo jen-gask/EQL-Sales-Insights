@@ -1,1 +1,195 @@
+--What is the date of the earliest and latest order, returned in one query?
+-- select the min and max of purchase_ts from orders table
+
+SELECT MIN(purchase_ts),MAX(purchase_ts)
+FROM core.orders;
+
+
+
+--What is the average order value for purchases made in USD? What about average order value for purchases made in USD in 2019?
+-- select the avg USD_price from orders table, filter by currency = USD with WHERE. select avg USD_price from orders table filter currency by USD and date between 1-01-2019 and 12-31-2019
+
+SELECT ROUND(AVG(usd_price))
+FROM core.orders
+WHERE currency = 'USD';
+
+SELECT ROUND(AVG(usd_price))
+FROM core.orders
+WHERE currency = 'USD'
+AND extract(year from purchase_ts) = 2019;
+
+SELECT id AS user_id, loyalty_program AS has_loyalty_status, created_on AS account_creation_date
+FROM core.customers
+WHERE account_creation_method = 'desktop' OR account_creation_method = 'mobile';
+
+SELECT DISTINCT product_name
+FROM core.orders
+WHERE currency = 'AUD' AND purchase_platform like '%website%'
+ORDER BY 1 ASC; 
+
+SELECT country
+FROM core.geo_lookup
+WHERE region = 'NA'
+ORDER BY 1 DESC
+LIMIT 10; 
+
+SELECT 
+  date_trunc(purchase_ts, year) AS purchase_year, 
+  COUNT(id) AS order_count
+FROM core.orders
+WHERE product_name LIKE '%Macbook%' 
+AND purchase_ts BETWEEN '2019-01-01' AND '2020-12-31'
+AND currency = 'USD'
+GROUP BY 1
+ORDER BY 1; 
+
+
+SELECT DISTINCT product_name, product_id
+FROM core.orders
+WHERE product_name LIKE '%Apple%' OR product_name LIKE '%bose%';
+
+SELECT DISTINCT product_id, product_name
+FROM core.orders
+WHERE LOWER(product_name) LIKE ANY  ('%apple%' , '%bose%');
+
+SELECT 
+orders.id AS order_id,
+date_trunc(order_status.purchase_ts, month) AS purchase_month,
+date_trunc(order_status.ship_ts, month) AS ship_month,
+date_diff(ship_ts, order_status.purchase_ts, day) AS time_to_ship,
+orders.product_name AS product_name
+FROM core.orders
+JOIN core.order_status
+ON orders.id = order_status.order_id
+WHERE order_status.purchase_ts BETWEEN '2020-01-01' AND '2020-12-31';
+
+SELECT 
+orders.id AS order_id,
+date_trunc(order_status.purchase_ts, month) AS purchase_month,
+date_trunc(order_status.ship_ts, month) AS ship_month,
+date_diff(ship_ts, order_status.purchase_ts, day) AS time_to_ship,
+orders.product_name AS product_name
+FROM core.orders
+JOIN core.order_status
+ON orders.id = order_status.order_id
+WHERE EXTRACT(year FROM order_status.purchase_ts) = 2020;
+
+SELECT AVG(date_diff(purchase_ts, created_on, day)), loyalty_program 
+FROM core.customers 
+JOIN core.orders
+ON orders.customer_id = customers.id
+GROUP BY 2;
+
+SELECT 
+DATE_TRUNC(ship_ts, month) as month,
+COUNT(order_id)
+FROM core.order_status
+GROUP BY month
+ORDER BY 1 DESC;
+
+SELECT
+extract(year FROM purchase_ts) as year,
+ROUND(AVG(usd_price))
+FROM core.orders
+GROUP BY 1
+ORDER BY 1; 
+
+SELECT *,
+CASE when refund_ts IS NOT NULL THEN 1 ELSE 0 end is_refund
+FROM core.order_status
+ORDER BY 2 DESC
+LIMIT 20;
+
+SELECT DISTINCT 
+product_id, product_name
+FROM core.orders
+WHERE product_name LIKE '%Apple%'
+OR product_name LIKE '%Macbook%';
+
+SELECT *, 
+DATE_DIFF(ship_ts, purchase_ts, day) AS time_to_ship
+FROM core.order_status;
+
+with quarterly_metrics AS (
+
+SELECT 
+date_trunc(orders.purchase_ts, quarter) AS purchase_quarter, 
+  COUNT(distinct orders.id) AS count_of_orders,
+  ROUND(SUM(orders.usd_price),2) AS sales,
+  ROUND(AVG(orders.usd_price),2) AS aov
+FROM core.orders
+LEFT JOIN core.customers
+ON customers.id = orders.customer_id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+WHERE region = 'NA' AND product_name LIKE '%Macbook%'
+GROUP BY 1
+ORDER BY 1
+)
+
+SELECT 
+  AVG(quarterly_metrics.count_of_orders),
+  AVG(quarterly_metrics.sales)
+FROM quarterly_metrics;
+
+SELECT 
+date_trunc(orders.purchase_ts, year) AS year, 
+  extract(quarter FROM orders.purchase_ts) AS quarter,
+  COUNT(distinct orders.id) AS count_of_orders,
+  ROUND(SUM(orders.usd_price),2) AS sales,
+  ROUND(AVG(orders.usd_price),2) AS aov,
+  orders.product_name,
+  geo_lookup.region
+FROM core.orders
+LEFT JOIN core.customers
+ON customers.id = orders.customer_id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+WHERE region = 'NA' AND lower (product_name) LIKE '%macbook%'
+GROUP BY 1, 2, 6, 7
+ORDER BY 1, 2;
+
+
+SELECT 
+  geo_lookup.region AS region, 
+  ROUND(AVG(date_diff(delivery_ts,order_status.purchase_ts,day)), 2) AS time_to_delivery
+FROM core.order_status
+LEFT JOIN core.orders
+ON orders.id = order_status.order_id
+LEFT JOIN core.customers
+ON customers.id = orders.customer_id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+WHERE (purchase_platform LIKE '%website%'AND order_status.purchase_ts BETWEEN '2022-01-01' AND '2022-12-31')
+OR purchase_platform LIKE '%mobile%'
+GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT
+  geo_lookup.region AS region, 
+  ROUND(AVG(date_diff(delivery_ts,order_status.purchase_ts,week)), 2) AS time_to_delivery
+FROM core.order_status
+LEFT JOIN core.orders
+ON orders.id = order_status.order_id
+LEFT JOIN core.customers
+ON customers.id = orders.customer_id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+WHERE (purchase_platform LIKE '%website%'AND order_status.purchase_ts BETWEEN '2022-01-01' AND '2022-12-31')
+OR (extract(year FROM orders.purchase_ts) = 2021 AND orders.product_name LIKE '%Samsung%')
+GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT 
+extract(year FROM orders.purchase_ts) AS year,
+case when product_name = '27in"" 4k gaming monitor' then '27in 4K gaming monitor'else product_name end AS product_cleaned,
+sum(case when refund_ts is not null then 1 else 0 end) AS refunds,
+avg(case when refund_ts is not null then 1 else 0 end) AS refund_rate
+FROM core.orders
+LEFT JOIN core.order_status
+ON order_status.order_id = orders.id
+GROUP by 1,2
+ORDER by 3 DESC; 
+
+
 
