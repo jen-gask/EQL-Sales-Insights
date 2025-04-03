@@ -38,7 +38,9 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
     
 -   **Peak Order Value**  
     **October 2020** stands out with an average order value of **$320**, initiating a five-month period of elevated average order values above **$300**. This pattern points to a sustained willingness among customers to purchase higher-priced or more premium products for nearly half a year spanning the popular holiday purchasing season.
-    
+
+
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/sales_aov_number%20of%20orders%20by%20product.PNG) ![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/total%20product%20sales.PNG)
 ### Product Performance
 
 -  **Top-Selling Products**
@@ -61,7 +63,11 @@ These three products clearly resonate with consumers, reflecting a mix of high-d
     
 Across all geographies, the 27in 4K Gaming Monitor consistently tops the charts, indicating strong consumer need for high-resolution displays.
 
+
 ### Regional Insights
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/regional%20view%20of%20sales%20over%20time.PNG)
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/sales_aov_number%20of%20orders%20by%20region.PNG)
+
 #### North America
 -   **Overall Market Leader**  
     North America posts the highest total revenue, reinforcing its position as the primary sales driver for many of the product.
@@ -80,17 +86,20 @@ Across all geographies, the 27in 4K Gaming Monitor consistently tops the charts,
 
 
 ### Refund Patterns
-
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/profit%20loss%20chart.PNG)
 -   **2019-2022 Average**  
     Overall, **6%** of items sold were refunded.* However, that amounted to **12%** profit loss due to refunds.
-    
 -   **Annual Trends**
     -   **2019**: 6% refund rate.
     -   **2020**: 9%, mirroring a large spike in sales.
     -   **2021**: 4%, indicating refunds dropped despite higher order volumes.
     -   **2022**: *0%, reflecting a missing refund dataset wherein refund data was missing so this was omitted from the evaluation.*
+ 
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Refund%20sales%20and%20refund%20rate%20correlation%20line%20chart.PNG)
 -   **Correlation with Sales** 
-	- Refund rates typically escalated in periods of booming sales and tapered off as volumes normalized, however, the value of refunds continued to grow into 2021 hitting 18% profit loss. 
+	- Refund rates typically escalated in periods of booming sales and tapered off as volumes normalized, however, the value of refunds continued to grow into 2021 hitting 18% profit loss.
+
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/product%20refund%20chart.PNG)
 -   **Product-Specific Refunds**
     -   **Apple products** hovered around a 10% refund rate.
     
@@ -99,22 +108,23 @@ Across all geographies, the 27in 4K Gaming Monitor consistently tops the charts,
     - **Samsung Charging Cable Pack** customers were fairly satisfied with their purchases as this product maintained low return rates that averaged to 1%.
     
    ### Loyalty Program Analysis
-
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Loyalty%20Non%20Loyalty%20Sales%20over%20time%20line.PNG) ![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Loyalty%20Non%20Loyalty%20Sales%20over%20time%20bar.PNG)    
+-   **Total Sales & Order Counts**
+    -   Loyalty Participants: **$10M** total; 45K orders.
+    -   Non-Participants: **$17M** total; 62K orders.
+      
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Loyalty%20Non%20Loyalty%20AOV%20over%20time%20line.PNG) ![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Loyalty%20Non%20Loyalty%20AOV%20over%20time%20bar.PNG)
 -   **Average Order Value (AOV)**
 
     -   Loyalty Members: **$240**
     -   Non-Members: **$275**
     
 Interestingly, non-members have a higher average spend, suggesting that loyalty members might be using discounts or promotions frequently.
-        
--   **Total Sales & Order Counts**
-    -   Loyalty Participants: **$10M** total; 45K orders.
-    -   Non-Participants: **$17M** total; 62K orders.
     
 -   **Key Trend Shift**  
 	- Between **June 2021** and **September 2022**, loyalty members *surpassed* non-members in both total sales and average order value, this should be investigated to understand what happened.
 ### Seasonality
-
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/seasonality.PNG)
 -   **Holiday Peaks**  
 	- Every **December** delivers a noticeable **jump in sales**, underscoring the impact of holiday promotions and increased consumer spending.
     
@@ -131,7 +141,8 @@ Interestingly, non-members have a higher average spend, suggesting that loyalty 
     -   **LATAM**: 7%  
 
    North America’s lead here aligns with its top sales numbers, while smaller shares of customer distribution in APAC and LATAM offer growth potential.
-   
+
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Customer%20growth.PNG)
 -   **Growth Patterns**
 
     -   From **2019 to 2020**, all regions exceeded **100%** in new customer growth, reflecting the sharp uptick in 2020 sales.
@@ -213,4 +224,61 @@ Interestingly, non-members have a higher average spend, suggesting that loyalty 
 ### ERD
 ![EQL _erd.png](https://github.com/jen-gask/EQL-Sales-Insights/blob/d5d7016eb413494701e839ecae7b9b9def5ffe74/EQL%20_erd.png)
 
+### Additional Regional Insights
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/Overall%20Regional%20sales%20performance.PNG)
 
+
+
+
+#### North America
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/39db1e42f708a636cbd3c23657f31efa4bab7add/Image%20Assets/NA%20product%20sales%20distribution.PNG)
+-   **Overall Market Leader**  
+    North America posts the highest total revenue, reinforcing its position as the primary sales driver for many of the products.
+    
+-   **Product-Level Sales Distribution**
+	  -   **Strongest Relative Distribution**: Samsung Webcam at 58% of regional sales distribution, possibly reflecting robust demand for remote work or streaming solutions.
+	   
+	  -    **Weakest Relative Distribution**: Apple iPhone sits at 47% of regional sales distribution, lower than anticipated given the brand’s strong global presence.
+#### EMEA
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/39db1e42f708a636cbd3c23657f31efa4bab7add/Image%20Assets/EMEA%20product%20sales%20distribution.PNG)
+-   **Strongest Distribution**
+
+    -   **Bose Soundsport Headphones** perform comparatively well here, capturing the highest share among all regions.
+    
+    -   **Apple AirPods** also contribute substantial revenue at $2.3M, suggesting EMEA consumers’ strong interest in premium audio devices and potentially audio devices with brand recognition.
+     
+-   **Weakest Distribution**
+
+    -   **Samsung Webcam** lags in EMEA market share, possibly indicating stronger competition from local or alternative webcam brands.
+
+#### APAC
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/39db1e42f708a636cbd3c23657f31efa4bab7add/Image%20Assets/APAC%20product%20sales%20distribution.PNG)
+-   **Highest Total Average Order Value**
+     The APAC region held a surprisingly high average order value, coupled with a 9% spend on the two most expensive products - the Macbook Air and ThinkPad laptops - there may be a tolerance for higher ticket products in this region.
+ 
+-   **Notable Product Spikes**
+    -   **Apple iPhone** sales jumped 125% in August 2021 after no sales the previous 4 months indicating a catalyst such as a phone release or campaign that prompted the sales jump.*
+    
+    -   **Samsung Webcam** sales jumped 91% in December 2021 coinciding with holiday campaigns.*
+-   **Strongest  Distribution**
+    -   Compared to APAC sales distribution across other products, Apple iPhone stands out with higher-than-expected average sales indicating a strong demand and potential opportunity to see how deep the well of demand may be.
+   -   **Weakest  Distribution** 
+	    -   Compared to APAC sales distribution across other products Bose Soundsport Headphones make up only 8% of global sales here, the weakest performance for that product and for the APAC region.
+    
+-   **Samsung Webcam Underperformance**
+    -   Despite the August 2021 surge, Samsung Webcam underperformed relative to other regions overall, suggesting a market acceptance challenge or strong local competition outside that spike period.
+    
+ **Sales did normalize post-spike.*
+
+#### LATAM
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/39db1e42f708a636cbd3c23657f31efa4bab7add/Image%20Assets/LATAM%20product%20sales%20distribution.PNG)
+-   **High Product Distribution**
+    -   **Samsung Webcams** are at a 10% sales distribution for LATAM, outpacing both the average distribution across all products for this region(6%) and slightly surpassing APAC’s distribution for Samsung Webcams.
+    
+-   **Low-Performing Products**
+    -   **Bose Soundsport Headphones** show a mere 3% distribution by comparison to LATAM's average sales. There may be a more popular alternative in this region.
+    
+    -   **Apple AirPods** also struggle at a 5% share. While this distribution is much closer to the region's average of 6%, this products sits at the lower end of distribution for LATAM sales and should be further evaluated.
+ 
+#### Product Distribution over Time
+![](https://github.com/jen-gask/EQL-Sales-Insights/blob/39db1e42f708a636cbd3c23657f31efa4bab7add/Image%20Assets/Product%20distribution%20over%20time.PNG)
