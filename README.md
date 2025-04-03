@@ -42,8 +42,9 @@ In **2020**, sales surged by **162%** compared to 2019, marking the most signifi
 
 
 ### Product Performance
-
+<p></p>
 ![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/sales_aov_number%20of%20orders%20by%20product.PNG)![](https://github.com/jen-gask/EQL-Sales-Insights/blob/fd25ddf281f8b6af9b62e1a397d2f2d2d6616cb3/Image%20Assets/total%20product%20sales.PNG)
+</p>
 -  **Top-Selling Products**
     
     -  **27in 4K Gaming Monitor**: $9.85M in total sales
