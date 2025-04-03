@@ -1,13 +1,6 @@
---What is the date of the earliest and latest order, returned in one query?
--- select the min and max of purchase_ts from orders table
 
 SELECT MIN(purchase_ts),MAX(purchase_ts)
 FROM core.orders;
-
-
-
---What is the average order value for purchases made in USD? What about average order value for purchases made in USD in 2019?
--- select the avg USD_price from orders table, filter by currency = USD with WHERE. select avg USD_price from orders table filter currency by USD and date between 1-01-2019 and 12-31-2019
 
 SELECT ROUND(AVG(usd_price))
 FROM core.orders
