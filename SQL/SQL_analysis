@@ -1,31 +1,38 @@
-
+--What are the earliest and lastet orders?
 SELECT MIN(purchase_ts),MAX(purchase_ts)
 FROM core.orders;
 
+--What is the average order price in USD rounded?
 SELECT ROUND(AVG(usd_price))
 FROM core.orders
 WHERE currency = 'USD';
 
+--What is the average order price in USD from 2019 rounded?
 SELECT ROUND(AVG(usd_price))
 FROM core.orders
 WHERE currency = 'USD'
 AND extract(year from purchase_ts) = 2019;
 
+--What are the id, loyalty status, and account creation date for customers who made an account on desktop or mobile
 SELECT id AS user_id, loyalty_program AS has_loyalty_status, created_on AS account_creation_date
 FROM core.customers
 WHERE account_creation_method = 'desktop' OR account_creation_method = 'mobile';
 
+--What are all the unique product that were sold in AUD on the website sorted alphabetically?
 SELECT DISTINCT product_name
 FROM core.orders
 WHERE currency = 'AUD' AND purchase_platform like '%website%'
 ORDER BY 1 ASC; 
 
+--What are the first 10 countries in the North American region, sorted in descending alphabetical order?
 SELECT country
 FROM core.geo_lookup
 WHERE region = 'NA'
 ORDER BY 1 DESC
 LIMIT 10; 
 
+
+-- What is the total number of orders by shipping month, sorted from most recent to oldest?
 SELECT 
   date_trunc(purchase_ts, year) AS purchase_year, 
   COUNT(id) AS order_count
@@ -36,7 +43,7 @@ AND currency = 'USD'
 GROUP BY 1
 ORDER BY 1; 
 
-
+--What are the unique combinations of product IDs and product names of all Apple and Bose products?
 SELECT DISTINCT product_name, product_id
 FROM core.orders
 WHERE product_name LIKE '%Apple%' OR product_name LIKE '%bose%';
@@ -45,6 +52,7 @@ SELECT DISTINCT product_id, product_name
 FROM core.orders
 WHERE LOWER(product_name) LIKE ANY  ('%apple%' , '%bose%');
 
+--What is the purchase month, shipping month, time to ship (in days), and product name for each order placed in 2020. [shown with 2 ways of filtering on the date]
 SELECT 
 orders.id AS order_id,
 date_trunc(order_status.purchase_ts, month) AS purchase_month,
@@ -67,12 +75,14 @@ JOIN core.order_status
 ON orders.id = order_status.order_id
 WHERE EXTRACT(year FROM order_status.purchase_ts) = 2020;
 
+--What is the average time-to-purchase, grouped by loyalty customers vs. non-loyalty customers? [in one query]
 SELECT AVG(date_diff(purchase_ts, created_on, day)), loyalty_program 
 FROM core.customers 
 JOIN core.orders
 ON orders.customer_id = customers.id
 GROUP BY 2;
 
+--What is the total number of orders by shipping month, sorted from most recent to oldest?
 SELECT 
 DATE_TRUNC(ship_ts, month) as month,
 COUNT(order_id)
@@ -80,6 +90,7 @@ FROM core.order_status
 GROUP BY month
 ORDER BY 1 DESC;
 
+--What is the average order value by year? Can you round the results to 2 decimals?
 SELECT
 extract(year FROM purchase_ts) as year,
 ROUND(AVG(usd_price))
@@ -87,22 +98,26 @@ FROM core.orders
 GROUP BY 1
 ORDER BY 1; 
 
+--Add a helper column `is_refund`  in the `order_status`  table that returns 1 if there is a refund, 0 if not. Return the first 20 records.
 SELECT *,
 CASE when refund_ts IS NOT NULL THEN 1 ELSE 0 end is_refund
 FROM core.order_status
 ORDER BY 2 DESC
 LIMIT 20;
 
+--What are the product IDs and product names of all Apple products?
 SELECT DISTINCT 
 product_id, product_name
 FROM core.orders
 WHERE product_name LIKE '%Apple%'
 OR product_name LIKE '%Macbook%';
 
+--What is the time to ship in days for each order returned with all original columns from the table?
 SELECT *, 
 DATE_DIFF(ship_ts, purchase_ts, day) AS time_to_ship
 FROM core.order_status;
 
+--What is the average quarterly order count and total sales for Macbooks sold in North America? 
 with quarterly_metrics AS (
 
 SELECT 
@@ -142,7 +157,7 @@ WHERE region = 'NA' AND lower (product_name) LIKE '%macbook%'
 GROUP BY 1, 2, 6, 7
 ORDER BY 1, 2;
 
-
+--For products purchased in 2022 on the website or (as well as) products purchased on mobile in any year, which region has the average highest time to deliver? 
 SELECT 
   geo_lookup.region AS region, 
   ROUND(AVG(date_diff(delivery_ts,order_status.purchase_ts,day)), 2) AS time_to_delivery
@@ -158,6 +173,7 @@ OR purchase_platform LIKE '%mobile%'
 GROUP BY 1
 ORDER BY 2 DESC;
 
+--[Previous query rewritten for website purchases made in 2022 or Samsung purchases made in 2021, expressing time to deliver in weeks instead of days]
 SELECT
   geo_lookup.region AS region, 
   ROUND(AVG(date_diff(delivery_ts,order_status.purchase_ts,week)), 2) AS time_to_delivery
@@ -173,6 +189,7 @@ OR (extract(year FROM orders.purchase_ts) = 2021 AND orders.product_name LIKE '%
 GROUP BY 1
 ORDER BY 2 DESC;
 
+--What was the refund rate and refund count for each product overall?
 SELECT 
 extract(year FROM orders.purchase_ts) AS year,
 case when product_name = '27in"" 4k gaming monitor' then '27in 4K gaming monitor'else product_name end AS product_cleaned,
